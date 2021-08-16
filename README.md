@@ -5,3 +5,4 @@ Group-bounded, invite-only, carpooling platform
 
 ##Launch Docker images
 docker-compose -f local.yml build  
+docker-compose -f local.yml run
