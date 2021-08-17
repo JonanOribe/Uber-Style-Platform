@@ -23,6 +23,8 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install Dependencies
       run: |
+        sudo apt-get install python3-dev
+        sudo apt-get install libevent-dev
         python -m pip install --upgrade pip
         pip install -r ./requirements/local.txt
     - name: Run Tests
