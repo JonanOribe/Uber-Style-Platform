@@ -1,9 +1,9 @@
 from django.db import models
 
-class CRideModel(models.Model):
+class uber_mockModel(models.Model):
     """Comparte Ride base model.
 
-    CRideModel acts as an abstract base class from which every
+    uber_mockModel acts as an abstract base class from which every
     other model in the project will inherit. This class provides
     every table with the following attributes:
         + created (DateTime): Store the datetime the objects was created
