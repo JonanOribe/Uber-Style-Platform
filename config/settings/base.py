@@ -3,7 +3,7 @@
 import environ
 
 ROOT_DIR = environ.Path(__file__) - 3
-APPS_DIR = ROOT_DIR.path('cride')
+APPS_DIR = ROOT_DIR.path('uber_mock')
 
 env = environ.Env()
 
@@ -43,6 +43,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
 ]
 LOCAL_APPS = [
+    "uber_mock.users.apps.UsersAppConfig",
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -139,7 +140,7 @@ ADMINS = [
 MANAGERS = ADMINS
 
 # Celery
-INSTALLED_APPS += ['cride.taskapp.celery.CeleryAppConfig']
+INSTALLED_APPS += ['uber_mock.taskapp.celery.CeleryAppConfig']
 if USE_TZ:
     CELERY_TIMEZONE = TIME_ZONE
 CELERY_BROKER_URL = env('CELERY_BROKER_URL')
